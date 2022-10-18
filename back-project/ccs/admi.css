@@ -79,3 +79,9 @@ body {
                         display: flex;
                         margin: 0px auto;
                     }
+.btn-editar {
+    background-color: green;
+}
+.btn-eliminar {
+    background-color: red;
+}
