@@ -11,7 +11,7 @@
 </head>
 <main class="main">
     <header>
-        <nav class="barra_navegacion" >
+        <nav class="barra_navegacion" hidden id="barraNave">
                     <div class="logo"></div>
                     <br>
                     <div class="configuracion">
@@ -32,6 +32,8 @@
     </header>
 
         <div class="panel">
+                  <input class="btn-success mostrar" type="button" value="Menu" onclick="mostrarMenu1()">
+        <input class="btn-success ocultar" type="button" value="Ocultar Menú" onclick="ocultarMenu1()">
                 <h4>Estadisticas</h4>
                     
                 <div class="container bg-light">
@@ -81,5 +83,7 @@
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 <script src="/back-project/funciones/verFactura.js"></script>
+<script src="./funciones/mostrarMenu.js"></script>
+
   </body>
 </html>
