@@ -24,22 +24,34 @@ function validarFormulario(e) {
     }
 
     if (editando){
-        //editarEmpleado();
+        editarEmpleado();
         editando = false;
     }else {
         objEmpleado.id = Date.now();
         objEmpleado.nombre = nombreImput.value;
-        objEmpleado.puesto = nombreImput.value;
+        objEmpleado.puesto = puestoImput.value;
 
         agregarEmpleado();
 
     }
 }
+
+
 function agregarEmpleado(){
     listaEmpleados.push({...objEmpleado});
 
     mostrarEmpleados();
+
+    formulario.reset();
+    limpiarObjeto();
 }
+
+function limpiarObjeto(){
+    objEmpleado.id='';
+    objEmpleado.nombre='';
+    objEmpleado.puesto='';
+}
+
 
 function mostrarEmpleados(){
     const divEmpleados = document.querySelector('.div-empleados');
@@ -54,13 +66,13 @@ function mostrarEmpleados(){
 
 
         const editarBoton = document.createElement('button');
-        // editarBoton.onclick = () => eliminarEmpleado(empleado);
+        editarBoton.onclick = () => cargarEmpleado(empleado);
         editarBoton.textContent = 'Editar';
         editarBoton.classList.add('btn', 'btn-editar');
         parrafo.append(editarBoton);
 
         const eliminarBoton = document.createElement('button');
-        // eliminarBoton.onclick = () => eliminarEmpleado(id);
+        eliminarBoton.onclick = () => eliminarEmpleado(id);
         eliminarBoton.textContent = 'eliminar';
         eliminarBoton.classList.add('btn', 'btn-eliminar');
         parrafo.append(eliminarBoton);
@@ -73,9 +85,52 @@ function mostrarEmpleados(){
     });
 
 }
-// function limpiarHtml(){
-//      const divEmpleados = document.querySelector('.div-empleados');
-//      while (divEmpleados.firstChild){
-//         divEmpleados.removeChild(divEmpleados.firstChild)
-//      }   
-// }
+
+ function cargarEmpleado(empleado){
+    const { id, nombre, puesto}= empleado;
+
+    nombreImput.value = nombre;
+    puestoImput.value = puesto;
+
+    objEmpleado.id = id;
+
+    formulario.querySelector('button[type="submit"]').textContent = 'Actualizar';
+
+    editando = true;
+ }
+
+function editarEmpleado(){
+    objEmpleado.nombre = nombreImput.value;
+    objEmpleado.puesto = puestoImput.value;
+
+    listaEmpleados.map(empleado=>{
+
+        if(empleado.id === objEmpleado.id){
+            empleado.id = objEmpleado.id;
+            empleado.nombre = objEmpleado.nombre;
+            empleado.puesto = objEmpleado.puesto;
+
+        }
+    })
+    limpiarHTML();
+    mostrarEmpleados();
+
+    formulario.reset();
+
+    formulario.querySelector('button[type="submit"]').textContent = actualizar;
+
+    editando = false
+}
+
+function eliminarEmpleado(id){
+    listaEmpleados = listaEmpleados.filter(empleado => empleado.id !== id);
+    limpiarHTML();
+    mostrarEmpleados();
+}
+
+function limpiarHTML(){
+     const divEmpleados = document.querySelector('.div-empleados');
+     while (divEmpleados.firstChild){
+        divEmpleados.removeChild(divEmpleados.firstChild)
+     }   
+}
