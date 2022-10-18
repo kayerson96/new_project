@@ -43,6 +43,7 @@ function agregarEmpleado(){
     mostrarEmpleados();
 
     formulario.reset();
+
     limpiarObjeto();
 }
 
@@ -52,8 +53,11 @@ function limpiarObjeto(){
     objEmpleado.puesto='';
 }
 
-
 function mostrarEmpleados(){
+ limpiarHTML();
+
+
+
     const divEmpleados = document.querySelector('.div-empleados');
 
     listaEmpleados.forEach( empleado =>{
@@ -111,7 +115,7 @@ function editarEmpleado(){
             empleado.puesto = objEmpleado.puesto;
 
         }
-    })
+    });
     limpiarHTML();
     mostrarEmpleados();
 
@@ -125,7 +129,7 @@ function editarEmpleado(){
 function eliminarEmpleado(id){
     listaEmpleados = listaEmpleados.filter(empleado => empleado.id !== id);
     limpiarHTML();
-    mostrarEmpleados();
+    mostrarEmpleados(); 
 }
 
 function limpiarHTML(){
