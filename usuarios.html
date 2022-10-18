@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/df59baf6b8.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="usuarios.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
+
+    <title>usuarios</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html" id="logo"></a>
+              <a class="navbar-brand text-light" href="#">Inicio</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active text-light" aria-current="page" href="#">Maquillaje</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Catálogo
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Bases</a></li>
+                      <li><a class="dropdown-item" href="#">Paletas de Colores</a></li>
+                      <li><a class="dropdown-item" href="#">Labiales</a></li>
+                      <li><a class="dropdown-item" href="#">Brochas</a></li>
+                      <li><a class="dropdown-item" href="#">Mas</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-light" href="#">Tutoriales</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-light" href="#">Nosotros</a>
+                  </li>
+                </ul>
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+        </nav>
+        <div><h1 class="text-center nombre">Latin Colors</h1></div>
+        <h1 id="titulo" class="titulo">After Eventos</h1>
+        <button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span id="contadorCarrito">0</span></button>
+     </header>
+     <!--seccion del carrito -->
+     <select id="filtroTalle">
+        <option value="all">Todos</option>
+        <option value="L">Large</option>
+        <option value="M">Medium</option>
+        <option value="S">Small</option>
+    </select>
+    
+    <div class="modal-contenedor">
+        <div class="modal-carrito">
+            <h3>Carrito</h3>
+            <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+            <div id="carrito-contenedor">
+                <!-- <div class="productoEnCarrito">
+                    <p>Buzo 1</p>
+                    <p>Precio: $1200</p>
+                    <button class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
+                </div> -->
+            </div>
+            <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+            <button id="vaciar-carrito" class="boton-agregar">Vaciar carrito</button>
+        </div>
+    </div>
+
+     <!--seccion del carrusel -->
+    <div class="contenedor">
+        <div class="carusel">
+            <div class="carusel__contenedor">
+            
+                <button aria-label="Anterior" class="carusel__anterior">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <div class="carusel__lista">
+                    <div id="sombra1" class="carusel__elemento">
+                        <img src="img/20011777-004.png" alt="sombra1">
+                        <p>sombra1 precio 5.29</p>
+                    </div>
+                    <div id="sombra2" class="carusel__elemento">
+                        <img src="img/20011777-01.png" alt="sombra2">
+                        <p>sombra2 precio 5.29</p>
+                    </div>
+                    <div id="sombra3" class="carusel__elemento">
+                        <img src="img/20011777-02.png" alt="sombra3">
+                        <p>sombra3 precio 5.29</p>
+                    </div>
+                    <div id="base1" class="carusel__elemento">
+                        <img src="img/base01.png" alt="base1">
+                        <p>base1 precio 5.29</p>
+                    </div>
+                    <div id="base2" class="carusel__elemento">
+                        <img src="img/base02.png" alt="base2">
+                        <p>base2 precio 5.29</p>
+                    </div>
+                    <div id="base3" class="carusel__elemento">
+                        <img src="img/base03.png" alt="base3">
+                        <p>base3 precio 5.29</p>
+                    </div>
+                    <div id="base4" class="carusel__elemento">
+                        <img src="img/base06.png" alt="base4">
+                        <p>base4 precio 5.29</p>
+                    </div>
+                    <div id="labial1" class="carusel__elemento">
+                        <img src="img/labial04.png" alt="labial1">
+                        <p>labial1 precio 5.29</p>
+                    </div>
+                    <div id="labial2" class="carusel__elemento">
+                        <img src="img/labial108.png" alt="labial2">
+                        <p>labial2 precio 5.29</p>
+                    </div>
+                    <div id="labial3" class="carusel__elemento">
+                        <img src="img/labial3.png" alt="labial3">
+                        <p>labial3 precio 5.29</p>
+                    </div>
+                    <div id="brochas" class="carusel__elemento">
+                        <img src="img/brushes.jpg" alt="brochas">
+                        <p>brochas precio 5.29</p>
+                    </div>
+                </div>  
+                
+                <button aria-label="Siguiente" class="carusel__siguiente">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            <div role="tablist" class="carusel__indicadores"></div>
+        </div>
+    </div>
+    <div id="carrito"></div>
+    <main id="contenedor-productos">
+        <section class="gallery" id="portafolio">
+            <div class="contenedor">
+                <h2 class="subtitulo text-center">Galeria</h2>
+                <div class="contenedor-galeria">
+                    <img src="img/uso_base_1.jpg" alt="" class="img-galeria">
+                    <img src="img/uso_base_2.jpg" alt="" class="img-galeria">
+                    <img src="img/uso_labial_1.jpg" alt="" class="img-galeria">
+                    <img src="img/uso_labial_2.jpg" alt="" class="img-galeria">
+                    <img src="img/uso_sombras_1.jpg" alt="" class="img-galeria">
+                    <img src="img/uso_sombras_2.jpg" alt="" class="img-galeria">
+                </div>
+            </div>
+            <section class="imagen-light">
+                <img src="img/cancel_96921.png" alt="" class="close">
+                <img src="" alt="" class="agregar-imagen">
+            </section>
+    </main>
+    <footer class=" main-footer">
+        <div class="contenedor-footer">
+                <div class="footer_One">
+                    <h4 class="text-center">Somos Apasionados</h4>
+                        <p>Estamos orgullosos de ser Latinos. Disfrutamos de la diversidad de esta .</p>
+                </div>
+    
+                    <div class="footerTwo">
+                      <div  class="img-footer text-center">
+                           <img src="img/facebook.png" alt=" imagen de facebook">
+                            <img src="img/instagra.png" alt=" imagen de instagram">
+                            <img src="img/twitter.png" alt=" imagen de twitter">
+                          </div>
+                    </div>
+    
+    
+                        <div class="footerThree"><ul>
+                            <li>Tel: 601 744 7050</li>
+                                <li>Calle 99 No. 49-38 </li>
+                                    <li>Local 502</li>
+                        </ul></div>
+        </div>
+        <div class="copyright text-center text-light">TODOS LOS DERECHOS RESERVADOS</div>
+     </footer>
+    <script src="lightbox.js"></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
+    <script src="usuarios.js"></script> 
+    <script defer src="stock.js"></script>
+    <script defer src="modal.js"></script>
+    <script defer src="app.js"></script>
+
+</body>  
+</html>
