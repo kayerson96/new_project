@@ -4,8 +4,8 @@ body{
 
 
 .login-box {
-    width: 320px;
-    height: 420px;
+    width: 400px;
+    height: 520px;
     background: #2B8D9C;
     color: #F5F1F1;
     top: 50%;
@@ -21,7 +21,7 @@ body{
     width: 100px;
     height: 100px;
     position: absolute;
-    top: -50px;
+    top: -30px;
     left: calc(50% - 50px);
   }
   
@@ -47,7 +47,6 @@ body{
   .login-box input[type="text"], .login-box input[type="password"] {
     border: none;
     border-bottom: 1px solid #F5F1F1;
-    background: transparent;
     outline: none;
     height: 40px;
     color: #1A1A1A;
@@ -72,12 +71,21 @@ body{
   
   .login-box a {
     text-decoration: none;
-    font-size: 12px;
+    font-size: 15px;
     line-height: 20px;
-    color: darkgrey;
+    color: white;
+    text-align: center;
+
   }
   
   .login-box a:hover {
     color: #F5F1F1;
   }
   
+  .btn-cuenta{
+    background-color: #FFA0BD;
+  }
+
+  .btn-cuenta:hover{
+    background-color: #6b0d29;
+  }
