@@ -7,6 +7,8 @@
     <title>Administrador</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="/back-project/ccs/admi.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 
 </head>
 <main class="main">
@@ -27,14 +29,17 @@
                                     <div class="configuracion">
                                         <div class="estadisticas"></div>
                                         <a class="navbar-brand text-light" href="estadisticas.html">Estadisticas</a>
+                                        
                                     </div>
         </nav>
     </header>
 
     <div class="panel">
+        <div class="btn-menu">
         <input class="btn-success mostrar" type="button" value="Menu" onclick="mostrarMenu()">
         <input class="btn-success ocultar" type="button" value="Ocultar Menú" onclick="ocultarMenu()">
-        <h4>Administrador</h4>
+    </div>
+        <h4 class="mt-5">Administrador</h4>
       
           <div class="contenedor container text-center bg-light">
           <div class="div-formulario"> 

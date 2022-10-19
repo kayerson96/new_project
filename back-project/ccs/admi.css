@@ -87,9 +87,12 @@ body {
 .btn-eliminar {
     background-color: red;
 }
-.mostrar{
-    background-color: #2B8D9C;  
+    .btn-menu{
+    position: fixed;
 }
-.ocultar{
-    background-color: #FFA0BD;  
-}
+            .mostrar{   
+                background-color: #2B8D9C;  
+            }
+            .ocultar{
+                background-color: #FFA0BD;  
+            }

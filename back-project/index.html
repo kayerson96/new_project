@@ -12,12 +12,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
 
 </head>
-<body>
+<body id="body" >
 
- <header>
+ <header id="header">
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.html" id="logo"></a>
+          <a class="navbar-brand" href="index.html" id="logo" alt></a>
           <a class="navbar-brand text-light" href="#">Inicio</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -53,6 +53,14 @@
     <div><h1 class="text-center nombre">Latin Colors</h1></div>
  </header>
 
+ <div class="accesibilidad" alt >
+  <select name="fondo" id="fondo" onchange="cambiarFondo(this)">
+      <option value="white">blanco</option>
+      <option value="black">black</option>
+  </select>
+ </div>
+ 
+
 
 <!--  contenido donde tendra el contenerdor principal con el carrusel y la seccion de quienes somos  -->
  <div class="container-fluid first-content">
@@ -62,13 +70,13 @@
                     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="img/tonners.jpg" class="container" alt="...">
+      <img src="img/tonners.jpg" class="container" alt="brochas">
     </div>
     <div class="carousel-item">
-      <img src="img/carrusel01.jpg" class="container" alt="...">
+      <img src="img/carrusel01.jpg" class="container" alt="imagen de una brocha con colores">
     </div>
     <div class="carousel-item">
-      <img src="img/brushes.jpg" class="container" alt="...">
+      <img src="img/brushes.jpg" class="container" alt="imagen de una brocha">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -103,28 +111,28 @@
           
                   <div class="carousel__lista">
                     <div class="carousel__elemento">
-                      <img src="img//base01.png" alt="Rock and Roll Hall of Fame">
+                      <img src="img//base01.png" alt="imagen de una base">
                       <p>Bse Mac</p>
                     </div>
                     <div class="carousel__elemento">
-                      <img src="img/labial1.png" alt="Constitution Square - Tower I">
+                      <img src="img/labial1.png" alt="imagen de labial tono rosa nude">
                       <p>Labial Avon, maxima cobertura</p>
                     </div>
                     <div class="carousel__elemento">
-                      <img src="img/base05.png" alt="Empire State Building">
+                      <img src="img/base05.png" alt="base en gotero">
                       <p>base Mac 100% cobertura</p>
                     </div>
                     <div class="carousel__elemento">
-                      <img src="img/base06.png" alt="Harmony Tower">
+                      <img src="img/base06.png" alt="base para piel morena">
                       <p>Base Piel Canela Mac</p>
                     </div>
             
                     <div class="carousel__elemento">
-                      <img src="img/paleta02.png" alt="Empire State Building">
+                      <img src="img/paleta02.png" alt="sombra de 12 colores tonos tierra">
                       <p>Sombra Glamour</p>
                     </div>
                     <div class="carousel__elemento">
-                      <img src="img/base05.png" alt="Harmony Tower">
+                      <img src="img/base05.png" alt="base para piel morena">
                       <p>Base Mac</p>
                     </div>
                   </div>
@@ -175,5 +183,6 @@
 <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 
 <script src="carusel.js"></script>
+<script src="./funciones/cambiarFondo.js"></script>
   </body>
 </html>

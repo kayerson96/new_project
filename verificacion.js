@@ -4,5 +4,5 @@ const verificar= ()=>{
         if(inputusuario =="Kuepa2022" && inputClve =="kuepa2022*" ){
             window.location ='/back-project/administrador.html';
         
-        }else(alert('Cave incorrecta'))
+        }else(Swal.fire("clave incorrecta"))
     }

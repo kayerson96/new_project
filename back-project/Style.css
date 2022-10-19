@@ -141,7 +141,20 @@ body {
     width: 100%;
 }
 }
+ /* aqui va la configuracion de accesibilidad */
+.accesibilidad{
+    position: fixed;
+    background-image: url(./img/dalto.png);
+    background-size: cover;
+    background-repeat: none;
+    background-position: center;
+    height: 90px;
+    width: 89px;
+    border-color: none;
+}
+.fondo
 
+/* aqui va el footer */
 .main-footer{
     height: 100%;
 }

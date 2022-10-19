@@ -19,7 +19,7 @@ function validarFormulario(e) {
     e.preventDefault();
 
     if(nombreImput.value ==='' || puestoImput.value ===''){
-        alert('Todos los campos son obligatorios');
+        Swal.fire("Todos los datos son requeridos");
         return;
     }
 
