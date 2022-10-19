@@ -12,7 +12,7 @@
 </head>
 <main class="main">
     <header>
-        <nav class="barra_navegacion" >
+        <nav class="barra_navegacion" id="barraNave2" >
                     <div class="logo"></div>
                     <br>
                     <div class="configuracion">
@@ -33,7 +33,8 @@
     </header>
 
         <div class="panel">
-                
+          <input class="btn-success mostrar" type="button" value="Menu" onclick="mostrarMenu2()">
+          <input class="btn-success ocultar" type="button" value="Ocultar Menú" onclick="ocultarMenu2()">             
           <h4>General</h4>
             <h2>Productos en Venta</h2>
           <div class="container bg-light">
@@ -47,8 +48,7 @@
                     </figure>
                   </template>
            </div>
-
-                <div class="container-fluid bg-light mt-4 text-center">
+                <div class="container-fluid bg-light mt-4 text-center contenedor-principal-factura">
                   <form row>
 
                     <select class="form-select form-select-lg mb-3 col-md-4" aria-label=".form-select-lg example" id="metodoPago">
@@ -59,7 +59,7 @@
                       </select>
 
                       <!-- aqui van los checkbox -->
-                        <table class="table">
+                        <table class="table container">
                           <thead>
                             <tr>
                               <th scope="col">Producto</th>
@@ -177,5 +177,7 @@
 <script src="funciones/generarPDF.js" type=""></script>
 <script src="jsPDF-1.3.2\dist\jspdf.min.js"></script>
 <script src="jsPDF-1.3.2\dist"></script>
+<script src="./funciones/mostrarMenu.js"></script>
+
   </body>
 </html>

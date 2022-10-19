@@ -57,7 +57,9 @@ body {
                                         background-size: cover;
                                         background-repeat: none;
                                     }
-
+.contenedor{
+    padding: 20px;
+}
 .panel{
     background-color: rgb(220, 220, 220, 0.8);
     height: 708px;
@@ -84,4 +86,10 @@ body {
 }
 .btn-eliminar {
     background-color: red;
+}
+.mostrar{
+    background-color: #2B8D9C;  
+}
+.ocultar{
+    background-color: #FFA0BD;  
 }

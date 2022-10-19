@@ -43,3 +43,6 @@ img {
   .maquillaje figcaption {
     padding: 1em;
   }
+  .contenedor-principal-factura{
+    overflow: scroll;
+  }
