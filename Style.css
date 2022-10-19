@@ -58,6 +58,12 @@ body {
                                     }
 
 
+#whatsapp{
+    background-image: url(/img/WhatsApp.png);
+    height: 50px;
+    width: 50px;
+}                                    
+
            /* --- --- CAROUSEL --- --- */
            .contain1 {
             background-color: rgb(255, 207, 221, 0.8);
