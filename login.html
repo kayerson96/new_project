@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
     <link rel="stylesheet" href="login.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </head>
 <body>
@@ -16,19 +17,19 @@
 <!-- 
       zona de logueo -->
         <div class="login-box">
-            <img src="./back-project/img/logo.png" class="avatar" alt="Avatar Image">
+            <img src="./back-project/img/logo.png" class="avatar" alt="logo de una siuleta de un rostro de mujeres con muchos colores">
             <h1>Iniciar Sesión</h1>
             <form>
 
               <label>Usuario
-              <input type="text" placeholder="Enter Username">
+              <input type="text" placeholder="Enter Username" id="usuario">
             </label>
 
               <label>Contraseña
-<input type="password" placeholder="Enter Password">
+<input type="password" placeholder="Enter Password" id="clave">
             </label>
 
-              <input type="submit" value="Login">
+              <input type="button" value="Login" onclick="verificar()" >
 
               <a href="#">Olvidastes la Clave</a><br>
               <a href="#">¿No tienes cuenta?</a>
@@ -37,6 +38,6 @@
           <!-- zona de registro -->
           
     </div>
-    
+    <script src="./verificacion.js"></script>
 </body>
 </html>

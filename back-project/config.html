@@ -33,10 +33,11 @@
     </header>
 
         <div class="panel">
+          <div class="btn-menu">
           <input class="btn-success mostrar" type="button" value="Menu" onclick="mostrarMenu2()">
-          <input class="btn-success ocultar" type="button" value="Ocultar Menú" onclick="ocultarMenu2()">             
-          <h4>General</h4>
-            <h2>Productos en Venta</h2>
+          <input class="btn-success ocultar" type="button" value="Ocultar Menú" onclick="ocultarMenu2()">      
+        </div>       
+            <h2 class="mt-5">Productos en Venta</h2>
           <div class="container bg-light">
 
                   <section class="maquillajes" id="maquillajes"></section>
@@ -59,7 +60,7 @@
                       </select>
 
                       <!-- aqui van los checkbox -->
-                        <table class="table container">
+                        <table class="table container-fluid">
                           <thead>
                             <tr>
                               <th scope="col">Producto</th>
