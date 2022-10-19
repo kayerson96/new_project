@@ -15,7 +15,7 @@ body {
 
 .carusel__anterior,
 .carusel__siguiente {
-     position: absolute;
+     position: relative;
      display: block;
      width: 30px;
      height: 30px;
@@ -119,6 +119,7 @@ body {
 
 
 .contenedor {
+    position: relative;
     width: 90%;
     max-width: 1200px;
     overflow: hidden;
@@ -277,7 +278,8 @@ p {
 }
 
 .modal-carrito {
-    position: relative;
+    position: absolute;
+   
     background-color: white;
     min-width: 500px;
     padding: 20px;
@@ -331,6 +333,7 @@ p {
     color: red;
     border: none;
     font-size: 20px;
+    
 }
 
 .boton-eliminar:hover {
