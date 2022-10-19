@@ -15,3 +15,5 @@ Js.
 Api's:
 https://stripe.com/docs/api
 Whatsapp.
+
+se genera accesibilidad en el home con camcio de background
