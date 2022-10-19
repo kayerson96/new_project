@@ -60,8 +60,16 @@ body {
 
 #whatsapp{
     background-image: url(/img/WhatsApp.png);
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 60px;
+    background-position: center;
+    background-size:contain;
+    background-repeat: none;
+    position: fixed;
+    top: calc(90% - 40px);
+    right: calc(13% - 40px);
+    border-radius: 30%;
+
 }                                    
 
            /* --- --- CAROUSEL --- --- */
@@ -156,6 +164,8 @@ body {
     height: 90px;
     width: 89px;
     border-color: none;
+    top: calc(10% - 40px);
+    right: calc(10% - 40px);
 }
 .fondo
 

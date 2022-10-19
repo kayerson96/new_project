@@ -278,7 +278,7 @@ p {
 }
 
 .modal-carrito {
-    position: absolute;
+    position: absolute !important;
    
     background-color: white;
     min-width: 500px;
