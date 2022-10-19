@@ -10,7 +10,8 @@ Tecnologias:
 Html
 Css
 Bootstrap
-Js.
+Js
+Sweet Alert.
 
 Api's:
 https://stripe.com/docs/api
